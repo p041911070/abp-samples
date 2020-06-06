@@ -10,7 +10,6 @@ namespace Acme.BookStore.MongoDB
     {
         public IMongoCollection<AppUser> Users => Collection<AppUser>();
         public IMongoCollection<Book> Books => Collection<Book>();
-
         protected override void CreateModel(IMongoModelBuilder modelBuilder)
         {
             base.CreateModel(modelBuilder);

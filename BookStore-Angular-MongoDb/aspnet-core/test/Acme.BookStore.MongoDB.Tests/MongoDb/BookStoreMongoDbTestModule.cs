@@ -1,5 +1,4 @@
 ﻿using System;
-using Mongo2Go;
 using Volo.Abp.Data;
 using Volo.Abp.Modularity;
 
@@ -11,13 +10,11 @@ namespace Acme.BookStore.MongoDB
         )]
     public class BookStoreMongoDbTestModule : AbpModule
     {
-        private static readonly MongoDbRunner MongoDbRunner = MongoDbRunner.Start();
-
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            var connectionString = MongoDbRunner.ConnectionString.EnsureEndsWith('/') +
-                                    "Db_" +		
-                                    Guid.NewGuid().ToString("N");
+            var connectionString = BookStoreMongoDbFixture.ConnectionString.EnsureEndsWith('/') +
+                                   "Db_" +
+                                   Guid.NewGuid().ToString("N");
 
             Configure<AbpDbConnectionOptions>(options =>
             {
