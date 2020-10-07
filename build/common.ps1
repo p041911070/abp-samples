@@ -5,21 +5,23 @@ $rootFolder = (Get-Item -Path "./" -Verbose).FullName
 # List of solutions
 
 $solutionPaths = (
-    "../aspnet-core/Authentication-Customization",
+    "../Authentication-Customization",
     "../BasicAspNetCoreApplication",
-    "../BasicConsoleApplication",
-    "../BookStore",
     "../BookStore-Angular-MongoDb/aspnet-core",
     "../BookStore-Modular/modules/book-management",
     "../BookStore-Modular/application",
+    "../BookStore-Mvc-EfCore",
     "../DashboardDemo",
+    "../DocumentationSamples/CustomApplicationModules",
     "../EfCoreMigrationDemo",
+    "../GrpcDemo",
+    "../KafkaEventBus",
+    "../MicroserviceDemo",
+    "../OrganizationUnitSample",
     "../PostgeSqlDemo",
     "../RabbitMqEventBus",
     "../SignalRDemo",
-    "../TextTemplateDemo",
-    "../StoredProcedureDemo",
-    "../DocumentationSamples/CustomApplicationModules",
     "../SignalRTieredDemo",
+    "../StoredProcedureDemo",
     "../TextTemplateDemo"
 )

@@ -16,11 +16,25 @@ function configureRoutes(routes: RoutesService) {
         layout: eLayoutType.application,
       },
       {
+        path: '/book-store',
+        name: '::Menu:BookStore',
+        iconClass: 'fas fa-book',
+        order: 2,
+        layout: eLayoutType.application,
+      },
+      {
         path: '/books',
         name: '::Menu:Books',
-        iconClass: 'fas fa-book',
-        order: 101,
+        parentName: '::Menu:BookStore',
         layout: eLayoutType.application,
+        requiredPolicy: 'BookStore.Books',
+      },
+      {
+        path: '/authors',
+        name: '::Menu:Authors',
+        parentName: '::Menu:BookStore',
+        layout: eLayoutType.application,
+        requiredPolicy: 'BookStore.Authors',
       },
     ]);
   };
